@@ -13,6 +13,9 @@
 		D92E02551FF390E60043AFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92E02541FF390E60043AFCA /* Assets.xcassets */; };
 		D92E02581FF390E60043AFCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92E02561FF390E60043AFCA /* LaunchScreen.storyboard */; };
 		D92E025B1FF390E60043AFCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D92E025A1FF390E60043AFCA /* main.m */; };
+		D92E02631FF391100043AFCA /* CQPickTimeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D92E02621FF391100043AFCA /* CQPickTimeAlertView.m */; };
+		D92E02661FF391440043AFCA /* CQPickTimeAlertItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D92E02651FF391440043AFCA /* CQPickTimeAlertItem.m */; };
+		D92E02691FF391610043AFCA /* CQPickTimeAlertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D92E02681FF391610043AFCA /* CQPickTimeAlertModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		D92E02571FF390E60043AFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D92E02591FF390E60043AFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D92E025A1FF390E60043AFCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D92E02611FF391100043AFCA /* CQPickTimeAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQPickTimeAlertView.h; sourceTree = "<group>"; };
+		D92E02621FF391100043AFCA /* CQPickTimeAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQPickTimeAlertView.m; sourceTree = "<group>"; };
+		D92E02641FF391440043AFCA /* CQPickTimeAlertItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQPickTimeAlertItem.h; sourceTree = "<group>"; };
+		D92E02651FF391440043AFCA /* CQPickTimeAlertItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQPickTimeAlertItem.m; sourceTree = "<group>"; };
+		D92E02671FF391610043AFCA /* CQPickTimeAlertModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQPickTimeAlertModel.h; sourceTree = "<group>"; };
+		D92E02681FF391610043AFCA /* CQPickTimeAlertModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQPickTimeAlertModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		D92E024A1FF390E60043AFCA /* PickTimeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D9670E4F1FF4F23000C4CC69 /* 模块 */,
 				D92E024B1FF390E60043AFCA /* AppDelegate.h */,
 				D92E024C1FF390E60043AFCA /* AppDelegate.m */,
 				D92E024E1FF390E60043AFCA /* ViewController.h */,
@@ -69,6 +79,19 @@
 				D92E025A1FF390E60043AFCA /* main.m */,
 			);
 			path = PickTimeDemo;
+			sourceTree = "<group>";
+		};
+		D9670E4F1FF4F23000C4CC69 /* 模块 */ = {
+			isa = PBXGroup;
+			children = (
+				D92E02671FF391610043AFCA /* CQPickTimeAlertModel.h */,
+				D92E02681FF391610043AFCA /* CQPickTimeAlertModel.m */,
+				D92E02641FF391440043AFCA /* CQPickTimeAlertItem.h */,
+				D92E02651FF391440043AFCA /* CQPickTimeAlertItem.m */,
+				D92E02611FF391100043AFCA /* CQPickTimeAlertView.h */,
+				D92E02621FF391100043AFCA /* CQPickTimeAlertView.m */,
+			);
+			path = "模块";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +125,7 @@
 				TargetAttributes = {
 					D92E02471FF390E60043AFCA = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -142,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92E02691FF391610043AFCA /* CQPickTimeAlertModel.m in Sources */,
 				D92E02501FF390E60043AFCA /* ViewController.m in Sources */,
+				D92E02631FF391100043AFCA /* CQPickTimeAlertView.m in Sources */,
 				D92E025B1FF390E60043AFCA /* main.m in Sources */,
 				D92E024D1FF390E60043AFCA /* AppDelegate.m in Sources */,
+				D92E02661FF391440043AFCA /* CQPickTimeAlertItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,12 +304,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J5JWPJ294;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PickTimeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KuaiJianKang.PickTimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -292,12 +320,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J5JWPJ294;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PickTimeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KuaiJianKang.PickTimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
