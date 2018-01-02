@@ -47,7 +47,7 @@
     _model = model;
     
     self.titleLabel.text = _model.title;
-    self.descLabel.text  = [@"          " stringByAppendingString:_model.desc];
+    self.descLabel.text  = _model.desc;
     
     [self layoutIfNeeded];
 }
@@ -57,6 +57,14 @@
     
     [self.titleLabel sizeToFit];
     self.titleLabel.frame = CGRectMake(0, 0, self.titleLabel.frame.size.width + 6, self.titleLabel.frame.size.height + 2);
+    
+    // 设置富文本：首行缩进
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
+    style.firstLineHeadIndent = self.titleLabel.frame.size.width + 4;
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:self.descLabel.text];
+    [attrString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.titleLabel.text.length)];
+    
+    self.descLabel.attributedText = attrString;
     
     self.descLabel.frame = CGRectMake(0, 0, self.frame.size.width, 30);
     [self.descLabel sizeToFit];

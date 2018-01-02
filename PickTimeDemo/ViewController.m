@@ -56,6 +56,8 @@
         [modelsArray addObject:model];
     }
     
+    
+    
     //------- 创建view -------//
     
     CQPickTimeAlertView *aview = [[CQPickTimeAlertView alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, 20)];

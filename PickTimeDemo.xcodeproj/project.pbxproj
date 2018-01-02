@@ -67,7 +67,7 @@
 		D92E024A1FF390E60043AFCA /* PickTimeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D9670E4F1FF4F23000C4CC69 /* 模块 */,
+				D9670E4F1FF4F23000C4CC69 /* 温馨提示模块 */,
 				D92E024B1FF390E60043AFCA /* AppDelegate.h */,
 				D92E024C1FF390E60043AFCA /* AppDelegate.m */,
 				D92E024E1FF390E60043AFCA /* ViewController.h */,
@@ -81,7 +81,7 @@
 			path = PickTimeDemo;
 			sourceTree = "<group>";
 		};
-		D9670E4F1FF4F23000C4CC69 /* 模块 */ = {
+		D9670E4F1FF4F23000C4CC69 /* 温馨提示模块 */ = {
 			isa = PBXGroup;
 			children = (
 				D92E02671FF391610043AFCA /* CQPickTimeAlertModel.h */,
@@ -91,7 +91,7 @@
 				D92E02611FF391100043AFCA /* CQPickTimeAlertView.h */,
 				D92E02621FF391100043AFCA /* CQPickTimeAlertView.m */,
 			);
-			path = "模块";
+			path = "温馨提示模块";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PickTimeDemo/Info.plist;
@@ -320,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PickTimeDemo/Info.plist;
