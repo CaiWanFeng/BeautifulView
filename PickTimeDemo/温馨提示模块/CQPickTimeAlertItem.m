@@ -62,7 +62,7 @@
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
     style.firstLineHeadIndent = self.titleLabel.frame.size.width + 4;
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:self.descLabel.text];
-    [attrString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.titleLabel.text.length)];
+    [attrString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.descLabel.text.length)];
     
     self.descLabel.attributedText = attrString;
     

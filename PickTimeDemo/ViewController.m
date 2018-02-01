@@ -31,7 +31,7 @@
             case 0:
             {
                 model.title = @"满免";
-                model.desc  = @"亲爱的小主，hehda";
+                model.desc  = @"亲爱的小主，hehda:123-456-789";
             }
                 break;
                 
